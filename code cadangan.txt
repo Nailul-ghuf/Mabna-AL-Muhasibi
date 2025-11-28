@@ -1,0 +1,311 @@
+code cadangan:
+
+
+<a
+            href="https://goo.gl/maps/xxxx"
+            target="_blank"
+            class="mt-4 inline-block text-green-400 hover:underline text-sm"
+          >
+            📍 Lihat di Google Maps
+          </a>
+
+<span>+62 822-4577-7101 (Mas Akmal)</span>
+<span>+62 857-5588-3472 (Mas Ashif)</span>
+
+        <!-- E. Struktur Kepengurusan -->
+        <section id="pengurus" data-aos="fade-up">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-[var(--accent-olive)]">
+              Struktur Kepengurusan
+            </h2>
+            <p class="mt-2 text-lg text-[var(--text-secondary)]">
+              Periode 2025 - 2026
+            </p>
+          </div>
+
+          <!-- ======================================================= -->
+          <!-- 3 pengurus yang selalu terlihat -->
+          <!-- ======================================================= -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a
+              href="../assets/Foto PMM/1.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/1.png"
+                alt="Foto Mudir"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">KYAI IZZUDDIN</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Mudir MSAA</p>
+            </a>
+            <a
+              href="../assets/Foto PMM/2.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/2.png"
+                alt="Foto Pengasuh"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">KYAI SYUHADAK</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Pengasuh</p>
+            </a>
+            <a
+              href="../assets/Foto PMM/3.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/3.png"
+                alt="Foto Murobbi"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">ABAH ILHAM BARIZI</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Murobbi</p>
+            </a>
+          </div>
+
+          <!-- =================================================================== -->
+          <!-- PERUBAHAN 2: 15 pengurus tambahan yang awalnya tersembunyi -->
+          <!-- =================================================================== -->
+          <div
+            id="pengurus-tambahan"
+            class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500"
+          >
+            <!-- Tambahkan 15 placeholder pengurus di sini -->
+            <!-- Contoh 1 dari 15 -->
+            <a
+              href="../assets/Foto PMM/4.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/4.png"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 4</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  2 dari 15 -->
+            <a
+              href="../assets/Foto PMM/5.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/5.png"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 5</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!-- ... (Duplikat blok <a> di atas sebanyak 13 kali lagi untuk total 18) ... -->
+
+            <!--  3 dari 15 -->
+            <a
+              href="../assets/Foto PMM/6.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/6.png"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 6</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  4 dari 15 -->
+            <a
+              href="../assets/Foto PMM/7.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/7.png"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 7</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+
+            <!--  5 dari 15 -->
+            <a
+              href="../assets/Foto PMM/8.png"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="../assets/Foto PMM/8.png"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 8</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+
+            <!--  6 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 9</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  7 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 10</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  8 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 11</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  9 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 12</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  10 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 13</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  11 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 14</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  12 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 15</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  13 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 16</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  14 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 17</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+            <!--  15 dari 15 -->
+            <a
+              href="https://placehold.co/800x800/a3a3a3/ffffff?text=Pengurus+4"
+              data-fslightbox="pengurus"
+              class="card-program group block text-center p-4 rounded-lg"
+            >
+              <img
+                src="https://placehold.co/400x400/a3a3a3/ffffff?text=Pengurus+4"
+                alt="Foto Pengurus"
+                class="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-transparent group-hover:border-[var(--accent-gold)] transition-all duration-300 shadow-lg"
+              />
+              <h3 class="font-bold text-xl">Nama Pengurus 18</h3>
+              <p class="text-[var(--accent-olive)] font-semibold">Jabatan</p>
+            </a>
+          </div>
+
+          <!-- ======================================================= -->
+          <!-- Tombol "Selengkapnya" untuk kontrol      -->
+          <!-- ======================================================= -->
+          <div class="mt-12 text-center">
+            <button
+              id="tombol-selengkapnya"
+              class="btn btn-primary inline-flex items-center gap-2"
+            >
+              <span>Selengkapnya</span>
+              <i
+                data-feather="chevron-down"
+                class="w-5 h-5 transition-transform duration-300"
+              ></i>
+            </button>
+          </div>
+        </section>
+
