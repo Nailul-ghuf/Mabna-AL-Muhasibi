@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Muhasibi - Asrama Pendidikan islam</title>
+    <meta
+      name="description"
+      content="Media Dakwah & Dokumentasi Asrama Al Muhasibi, pusat pengembangan spiritual dan intelektual bagi mahasiswa dalam naungan nilai-nilai Islam."
+    />
+    <link rel="icon" href="assets/logo2.png" type="image/png" />
+
+    <!-- Preconnect untuk mempercepat loading font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Poppins, Open Sans, Amiri -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    -->
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/Style.css" />
+
+    <!-- Tailwind CSS (dimuat di head untuk rendering awal) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="antialiased">
+    <!-- Header & Navigasi -->
+    <header
+      class="bg-[var(--foreground)]/80 backdrop-blur-lg sticky top-0 z-50 border-b border-[var(--border-color)] transition-colors duration-300"
+    >
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo & Nama -->
+          <a
+            href="#"
+            class="flex items-center space-x-3 rtl:space-x-reverse text-[var(--accent-olive)]"
+          >
+            <img
+              src="assets/logo.png"
+              alt="Logo Al Muhasibi"
+              class="h-10 w-10 self-start rounded-full object-cover shadow-sm"
+            />
+
+            <!-- PERUBAHAN 2: Mengganti tulisan Arab dengan Bahasa Indonesia -->
+            <div class="flex flex-col">
+              <span class="text-xl font-bold font-heading self-center"
+                >Asrama Al Muhasibi</span
+              >
+              <p class="text-xs text-[var(--text-secondary)] leading-tight">
+                UIN Maulana Malik Ibrahim Malang
+              </p>
+            </div>
+          </a>
+
+          <!-- Navigasi Desktop -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="Index.html" class="nav-link active">Beranda</a>
+            <a href="pages/profile.html" class="nav-link">Profil</a>
+            <a href="pages/kegiatan.html" class="nav-link">Kegiatan</a>
+            <a href="pages/jadwal.html" class="nav-link">Jadwal</a>
+            <a href="#kontak" class="nav-link">Kontak</a>
+          </div>
+
+          <!-- Tombol Dark Mode & Menu Mobile -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              class="p-2 rounded-full text-[var(--text-secondary)] hover:bg-[var(--border-color)] transition-colors"
+            >
+              <i
+                id="theme-toggle-sun"
+                data-feather="sun"
+                class="h-5 w-5 hidden"
+              ></i>
+              <i
+                id="theme-toggle-moon"
+                data-feather="moon"
+                class="h-5 w-5 hidden"
+              ></i>
+              <span class="sr-only">Toggle theme</span>
+            </button>
+            <div class="md:hidden">
+              <button
+                id="mobile-menu-button"
+                aria-label="Buka menu"
+                class="p-2 rounded-md text-[var(--text-secondary)] hover:bg-[var(--border-color)]"
+              >
+                <i data-feather="menu" class="h-6 w-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Menu Mobile -->
+      <div class="md:hidden hidden bg-[var(--foreground)]" id="mobile-menu">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-[var(--border-color)]"
+        >
+          <a href="index.html" class="nav-link-mobile active">Home</a>
+          <a href="pages/profile.html" class="nav-link-mobile">Profil</a>
+          <a href="pages/kegiatan.html" class="nav-link-mobile">Kegiatan</a>
+          <a href="pages/jadwal.html" class="nav-link-mobile">Jadwal</a>
+          <a href="#kontak" class="nav-link-mobile">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center">
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"
+        ></div>
+        <img
+          src="assets/FotoMuhasibi-1.png"
+          onerror="this.onerror=null;this.src='https://placehold.co/2000x1200/212529/F8F9FA?text=Al+Muhasibi';"
+          alt="Suasana tenang di dalam Asrama Al Muhasibi"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          class="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8"
+          data-aos="fade-up"
+        >
+          <div class="max-w-3xl text-white">
+            <h1
+              class="text-4xl md:text-6xl font-bold leading-tight tracking-tight"
+            >
+              Media Dakwah & Dokumentasi Asrama Al Muhasibi
+            </h1>
+            <blockquote
+              class="mt-6 border-l-4 border-[var(--accent-gold)] pl-4"
+            >
+              <p class="text-lg md:text-xl font-light font-amiri italic">
+                Menjadi pusat pengembangan spiritual dan intelektual bagi
+                mahasiswa dalam naungan nilai-nilai Islam, Menghasilkan generasi
+                Ulul Albab
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWAL PERUBAHAN: Menggabungkan section Selamat Datang dan Quote -->
+      <section
+        class="py-20 md:py-28 bg-[var(--foreground)] border-y border-[var(--border-color)]"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Konten "Selamat Datang" dipindahkan ke sini -->
+          <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[var(--accent-olive)]">
+              Selamat Datang di Ruang Digital Kami
+            </h2>
+            <p class="mt-4 text-lg text-[var(--text-secondary)]">
+              Website ini didedikasikan untuk menyebarkan informasi,
+              mendokumentasikan kegiatan, dan menjadi sarana dakwah bagi seluruh
+              civitas akademika, wali santri, dan masyarakat umum yang tertarik
+              dengan kehidupan di Asrama Al Muhasibi.
+            </p>
+          </div>
+
+          <!-- Konten "Quote" tetap di sini -->
+          <div
+            class="text-center max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <blockquote class="relative">
+              <div class="mt-10 text-center">
+                <p
+                  class="text-2xl md:text-3xl italic text-[var(--text-primary)] leading-relaxed"
+                >
+                  خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ
+                </p>
+                <p
+                  class="mt-3 text-base md:text-lg text-[var(--text-secondary)]"
+                >
+                  Artinya: "Sebaik-baik manusia adalah yang paling bermanfaat
+                  bagi manusia".
+                </p>
+                <p
+                  class="mt-1 text-sm md:text-base text-[var(--text-secondary)] italic"
+                >
+                  (HR. Ahmad, ath-Thabrani, ad-Daruquthni)
+                </p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Program Unggulan Section -->
+      <section id="kegiatan-preview" class="py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[var(--accent-olive)]">
+              Program Unggulan
+            </h2>
+            <p class="mt-4 text-lg text-[var(--text-secondary)]">
+              Fokus utama pembinaan di Asrama Al Muhasibi untuk membentuk
+              pribadi yang seimbang antara spiritualitas dan intelektualitas.
+            </p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- PERUBAHAN 1: Menambahkan class 'card-program' -->
+            <div
+              class="card-program bg-[var(--foreground)] p-8 rounded-xl shadow-sm border border-[var(--border-color)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="bg-[var(--accent-olive)]/10 inline-flex p-3 rounded-full mb-5"
+              >
+                <i
+                  data-feather="book-open"
+                  class="feather text-[var(--accent-olive)] h-8 w-8"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">
+                Taklim Afkar
+              </h3>
+              <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+                Mengkaji kitab-kitab klasik dan kontemporer untuk memperdalam
+                pemahaman keislaman.
+              </p>
+            </div>
+
+            <!-- PERUBAHAN 2: Menambahkan class 'card-program' -->
+            <div
+              class="card-program bg-[var(--foreground)] p-8 rounded-xl shadow-sm border border-[var(--border-color)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="bg-[var(--accent-olive)]/10 inline-flex p-3 rounded-full mb-5"
+              >
+                <i
+                  data-feather="sun"
+                  class="feather text-[var(--accent-olive)] h-8 w-8"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">
+                Tahsin & Taklim Qur’an
+              </h3>
+              <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+                Program intensif untuk memperbaiki bacaan dan mempelajari
+                Qur’an.
+              </p>
+            </div>
+
+            <!-- PERUBAHAN 3: Menambahkan class 'card-program' -->
+            <div
+              class="card-program bg-[var(--foreground)] p-8 rounded-xl shadow-sm border border-[var(--border-color)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div
+                class="bg-[var(--accent-olive)]/10 inline-flex p-3 rounded-full mb-5"
+              >
+                <i
+                  data-feather="users"
+                  class="feather text-[var(--accent-olive)] h-8 w-8"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">
+                UPKM (Unit Pengembangan Kreativitas Mahasantri)
+              </h3>
+              <p class="text-sm leading-relaxed text-[var(--text-secondary)]">
+                Mengembangkan potensi santri melalui kreativitas, dokumentasi
+                dakwah, dan kontribusi aktif.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profil Singkat Section -->
+      <section
+        id="profil"
+        class="py-20 md:py-28 bg-[var(--foreground)] border-y border-[var(--border-color)]"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+              <img
+                src="assets/gedungMuhasibi.jpg"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/212529/F8F9FA?text=Profil';"
+                alt="Mahasiswa sedang berdiskusi di lingkungan kampus"
+                class="rounded-lg shadow-lg w-full"
+              />
+            </div>
+            <div data-aos="fade-left">
+              <h2 class="text-3xl font-bold text-[var(--accent-olive)] mb-4">
+                Mengenal Al Muhasibi
+              </h2>
+              <p class="text-[var(--text-secondary)] leading-relaxed mb-6">
+                Didirikan untuk menjadi wadah pembinaan karakter Islami di
+                lingkungan universitas. Nama "Al Muhasibi" dipilih untuk
+                meneladani konsep introspeksi diri (muhasabah) dari Imam
+                Al-Harith Al-Muhasibi, melahirkan generasi intelektual muslim
+                yang berakhlak mulia.
+              </p>
+              <a href="pages/profile.html" class="btn btn-primary">
+                Lihat Profil Lengkap
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeri Preview Section -->
+      <section id="kegiatan-mahasantri" class="py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[var(--accent-olive)]">
+              Kegiatan Mahasantri
+            </h2>
+            <p class="mt-4 text-lg text-[var(--text-secondary)]">
+              Momen-momen berharga dari berbagai kegiatan yang kami
+              selenggarakan.
+            </p>
+          </div>
+          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="card-program overflow-hidden rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1604328993558-a0c445440763?q=80&w=800"
+                class="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                alt="Mahasantri dalam halaqah Quran"
+              />
+            </div>
+
+            <div
+              class="card-program overflow-hidden rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1618494432128-4499b78e9174?q=80&w=800"
+                class="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                alt="Narasumber dalam diskusi publik"
+              />
+            </div>
+            <div
+              class="card-program overflow-hidden rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=800"
+                class="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                alt="Suasana buka puasa bersama di asrama"
+              />
+            </div>
+            <div
+              class="card-program overflow-hidden rounded-lg shadow-md"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1599485659222-289f682855e3?q=80&w=800"
+                class="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                alt="Kitab kuning dalam sesi kajian ilmiah"
+              />
+            </div>
+          </div>
+          <div class="mt-12 text-center" data-aos="fade-up">
+            <a href="pages/kegiatan.html" class="btn btn-primary">
+              Lihat Semua Kegiatan
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- AWAL FOOTER YANG ELEGAN -->
+    <footer
+      id="kontak"
+      class="bg-[var(--foreground)] border-t border-[var(--border-color)]"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Grid utama dengan 3 kolom yang seimbang -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8">
+          <!-- Kolom 1: Menu Cepat (Navigasi) -->
+          <div>
+            <h3
+              class="text-lg font-semibold font-heading text-[var(--text-primary)] mb-4"
+            >
+              Menu Cepat
+            </h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="text-[var(--text-secondary)] hover:text-[#2E7D32] transition-all duration-300 hover:pl-2"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/profile.html"
+                  class="text-[var(--text-secondary)] hover:text-[#2E7D32] transition-all duration-300 hover:pl-2"
+                  >Profil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/kegiatan.html"
+                  class="text-[var(--text-secondary)] hover:text-[#2E7D32] transition-all duration-300 hover:pl-2"
+                  >Kegiatan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/jadwal.html"
+                  class="text-[var(--text-secondary)] hover:text-[#2E7D32] transition-all duration-300 hover:pl-2"
+                  >Jadwal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kontak"
+                  class="text-[var(--text-secondary)] hover:text-[#2E7D32] transition-all duration-300 hover:pl-2"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kolom 2: Kontak Kami -->
+          <div>
+            <h3
+              class="text-lg font-semibold font-heading text-[var(--text-primary)] mb-4"
+            >
+              Kontak Kami
+            </h3>
+            <div class="space-y-4 text-sm text-[var(--text-secondary)]">
+              <!-- Alamat + Link Google Maps -->
+              <div class="flex items-start gap-3">
+                <i
+                  data-feather="map-pin"
+                  class="w-4 h-4 text-[#2E7D32] mt-1 flex-shrink-0"
+                ></i>
+                <div class="flex flex-col text-sm text-[var(--text-secondary)]">
+                  <span
+                    >Mabna Al Muhasibi UIN Maulana Malik Ibrahim Malang</span
+                  >
+                  <span>Jalan Gajahyana No. 50, Dinoyo, Sukun</span>
+                  <a
+                    href="https://maps.app.goo.gl/MeudYH31nbzj8P857"
+                    target="_blank"
+                    class="mt-1 text-[#2E7D32] hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Lihat di Google Maps</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Telepon -->
+              <div class="flex items-start gap-3">
+                <i
+                  data-feather="phone"
+                  class="w-4 h-4 text-[#2E7D32] mt-1 flex-shrink-0"
+                ></i>
+                <div class="flex flex-col gap-1">
+                  <span>+62 812 3456 7890 (Mas Muza)</span>
+                  <span>+62 822-4577-7101 (Mas Akmal)</span>
+                  <span>+62 857-5588-3472 (Mas Ashif)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom 3: Terhubung -->
+          <div>
+            <h3
+              class="text-lg font-semibold font-heading text-[var(--text-primary)] mb-4"
+            >
+              Terhubung
+            </h3>
+            <div class="space-y-4 text-sm text-[var(--text-secondary)]">
+              <!-- Email -->
+              <div class="flex items-center gap-3">
+                <i
+                  data-feather="mail"
+                  class="w-4 h-4 text-[#2E7D32] flex-shrink-0"
+                ></i>
+                <a
+                  href="mailto:almuhasibidormitory56@gmail.com"
+                  class="hover:text-[#2E7D32] transition-colors"
+                  >almuhasibidormitory56@gmail.com</a
+                >
+              </div>
+              <!-- Jam Operasional -->
+              <div class="flex items-center gap-3">
+                <i
+                  data-feather="clock"
+                  class="w-4 h-4 text-[#2E7D32] flex-shrink-0"
+                ></i>
+                <span>Senin - Jum'at: 08.00 - 17.00</span>
+              </div>
+            </div>
+            <div class="mt-4 flex space-x-3 text-[var(--text-secondary)]">
+              <!-- Ikon Media Sosial -->
+              <a
+                href="http://www.youtube.com/@msaauinmalang"
+                aria-label="Youtube"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] transition-colors duration-300 hover:bg-[#2E7D32] hover:text-white hover:border-[#2E7D32]"
+                ><i data-feather="youtube" class="w-5 h-5"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/almuhasibiofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                aria-label="Instagram"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] transition-colors duration-300 hover:bg-[#2E7D32] hover:text-white hover:border-[#2E7D32]"
+                ><i data-feather="instagram" class="w-5 h-5"></i
+              ></a>
+
+              <a
+                href="https://www.tiktok.com/@muhasibianmsaa?is_from_webapp=1&sender_device=pc"
+                aria-label="TikTok"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-color)] transition-colors duration-300 hover:bg-[#2E7D32] hover:text-white hover:border-[#2E7D32]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-5 h-5"
+                >
+                  <path
+                    d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v2a7 7 0 0 1-7-7z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Login Admin -->
+        <div
+          class="border-t border-[var(--border-color)] mt-8 md:mt-10 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[var(--text-secondary)]"
+        >
+          <p class="order-2 md:order-1 mt-4 md:mt-0 text-center md:text-left">
+            © 2025 Asrama Al Muhasibi. Developed by
+            <a href="#" class="hover:text-[#2E7D32] font-semibold">Nailul</a>
+          </p>
+          <div class="order-1 md:order-2 text-center md:text-right">
+            <a
+              href="#"
+              class="hover:text-[#2E7D32] transition-colors block md:inline"
+              >Kebijakan Privasi</a
+            >
+            <span class="mx-1 md:mx-2 hidden md:inline">·</span>
+            <a
+              href="#"
+              class="hover:text-[#2E7D32] transition-colors block md:inline"
+              >Syarat Layanan</a
+            >
+            <span class="mx-1 md:mx-2 hidden md:inline">·</span>
+            <a
+              href="pages/login.html"
+              class="hover:text-[#2E7D32] transition-colors block md:inline"
+              >Login Admin</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- AKHIR FOOTER -->
+
+    <!-- Feather Icons & AOS & Custom JS -->
+    <!-- defer memastikan skrip dieksekusi setelah HTML selesai di-parse -->
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/script.js" defer></script>
+  </body>
+</html>
