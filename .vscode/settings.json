@@ -1,3 +1,5 @@
 {
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.codeActionsOnSave": {
+        "source.fixAll.prettier": "explicit",
+    },
 }
