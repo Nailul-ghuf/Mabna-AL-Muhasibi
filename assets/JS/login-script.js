@@ -1,21 +1,7 @@
 // Mengambil elemen-elemen untuk animasi geser
 const container = document.getElementById("container");
-const registerBtn = document.getElementById("register");
-const loginBtn = document.getElementById("login");
+const signInForm = document.querySelector('.sign-in');
 
-// Event listener untuk mengaktifkan panel register
-if (registerBtn) {
-  registerBtn.addEventListener("click", () => {
-    container.classList.add("active");
-  });
-}
-
-// Event listener untuk mengaktifkan panel login
-if (loginBtn) {
-  loginBtn.addEventListener("click", () => {
-    container.classList.remove("active");
-  });
-}
 
 // Logika untuk Show/Hide Password
 const togglePasswordButtons = document.querySelectorAll(".toggle-password");
