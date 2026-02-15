@@ -319,6 +319,7 @@ function FasilitasCard({ title, image, href }: { title: string; image: string; h
                 src={image}
                 alt={title}
                 fill
+                unoptimized
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black/40"></div>
