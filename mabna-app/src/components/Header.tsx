@@ -25,7 +25,7 @@ export function Header() {
     const navLinks = [
         { name: "Beranda", href: "/" },
         { name: "Profil", href: "/profile" },
-        { name: "Kegiatan", href: "/kegiatan" },
+        { name: "Galeri", href: "/galeri" },
         { name: "Jadwal", href: "/jadwal" },
         { name: "Kontak", href: "#kontak" },
     ]

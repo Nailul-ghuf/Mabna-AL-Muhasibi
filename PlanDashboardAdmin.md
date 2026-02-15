@@ -104,7 +104,11 @@ The Admin Dashboard will serve as a control center (Control Panel) for Mabna Al 
 ### Phase 2: Backend Integration (Week 2)
 - [x] Connect the Supabase Client to the Frontend.
 - [x] Create the Admin Login page and Auth Logic.
-- [x] Replace the static (hardcoded) content on the Home Page with data from the Database (Fetch Data).
+- [x] Replace the static (hardcoded) content on the Home Page with data from the Database (Fetch Data). 
+
+Supabase:
+Api URL: https://nozwgjjkecyrpkpybrdf.supabase.co
+anon public: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vendnamprZWN5cnBrcHlicmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0ODQwMzIsImV4cCI6MjA4NjA2MDAzMn0.jz7eUl7OhwM-NgeNIBS8_Kx73FTxilpeF1NZSkGZu88
 
 ### Phase 3: Admin Dashboard Development (Week 3)
 - [ ] Create the Admin Layout (Sidebar Menu).

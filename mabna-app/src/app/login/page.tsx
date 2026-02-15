@@ -1,60 +1,187 @@
+'use client'
+
 import { login } from './actions'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Eye, EyeOff } from 'lucide-react'
+import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
-export default function LoginPage() {
+function LoginForm() {
+    const [showPassword, setShowPassword] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const searchParams = useSearchParams()
+    const errorMessage = searchParams.get('error')
+
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[var(--background)] p-4 relative">
-            <div className="absolute top-8 left-8">
-                <Link href="/" className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--accent-olive)] transition-colors">
-                    <ArrowLeft className="w-5 h-5" />
-                    <span>Kembali ke Beranda</span>
+        <div className="min-h-screen flex items-center justify-center flex-col p-4 relative"
+             style={{ backgroundColor: 'var(--background)', fontFamily: 'var(--font-body)' }}>
+
+            {/* Back to Home Button - Pill Style */}
+            <div className="absolute top-5 left-5 z-50 md:block">
+                <Link
+                    href="/"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm no-underline transition-all duration-300 hover:-translate-y-0.5"
+                    style={{
+                        backgroundColor: 'var(--foreground)',
+                        color: 'var(--text-secondary)',
+                        border: '1px solid var(--border-color)',
+                        boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                    }}
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Kembali ke Halaman Utama</span>
                 </Link>
             </div>
 
-            <div className="w-full max-w-md bg-[var(--foreground)] rounded-xl shadow-lg p-8 border border-[var(--border-color)]">
-                <div className="text-center mb-8">
-                    <h1 className="text-2xl font-bold font-heading text-[var(--accent-olive)]">Login Admin</h1>
-                    <p className="text-[var(--text-secondary)] mt-2">Masuk ke dasbor pengelola</p>
-                </div>
-
-                <form action={login} className="space-y-6">
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
-                            Email Address
-                        </label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                            className="w-full px-4 py-3 rounded-lg bg-[var(--background)] border border-[var(--border-color)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-olive)] focus:border-transparent transition-all"
-                            placeholder="admin@example.com"
-                        />
-                    </div>
-
-                    <div>
-                        <label htmlFor="password" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
-                            Password
-                        </label>
-                        <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            required
-                            className="w-full px-4 py-3 rounded-lg bg-[var(--background)] border border-[var(--border-color)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-olive)] focus:border-transparent transition-all"
-                            placeholder="••••••••"
-                        />
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="w-full bg-[var(--accent-gold)] text-[#423512] font-bold py-3 px-6 rounded-lg text-center cursor-pointer no-underline border-2 border-transparent transition-all duration-300 relative overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1"
+            {/* Main Container - Matches the original 768px card */}
+            <div
+                className="relative overflow-hidden w-full"
+                style={{
+                    backgroundColor: 'var(--foreground)',
+                    borderRadius: '30px',
+                    boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
+                    border: '1px solid var(--border-color)',
+                    maxWidth: '768px',
+                    minHeight: '480px',
+                }}
+            >
+                {/* Form Container */}
+                <div className="absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-600">
+                    <form
+                        action={async (formData) => {
+                            setIsSubmitting(true)
+                            await login(formData)
+                            setIsSubmitting(false)
+                        }}
+                        className="flex flex-col items-center justify-center w-full h-full px-10"
+                        style={{ backgroundColor: 'var(--foreground)' }}
                     >
-                        Masuk
-                    </button>
-                </form>
+                        <h1
+                            className="font-bold"
+                            style={{
+                                fontFamily: 'var(--font-heading)',
+                                color: 'var(--text-primary)',
+                            }}
+                        >
+                            Login Admin
+                        </h1>
+
+                        <span
+                            className="my-2 text-sm"
+                            style={{
+                                fontSize: '12px',
+                                color: 'var(--text-secondary)',
+                            }}
+                        >
+                            Masuk ke dasbor pengelola
+                        </span>
+
+                        {/* Error Message */}
+                        {errorMessage && (
+                            <div className="w-full max-w-[420px] bg-red-500/10 border border-red-500/30 text-red-400 text-sm p-3 rounded-lg my-2 text-center">
+                                {errorMessage}
+                            </div>
+                        )}
+
+                        {/* Email Input */}
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                            className="w-full outline-none transition-[border-color] duration-300 focus:border-[var(--accent-olive)]"
+                            style={{
+                                maxWidth: '420px',
+                                backgroundColor: 'var(--background)',
+                                border: '1px solid var(--border-color)',
+                                color: 'var(--text-primary)',
+                                margin: '8px 0',
+                                padding: '10px 15px',
+                                fontSize: '13px',
+                                borderRadius: '8px',
+                            }}
+                        />
+
+                        {/* Password Input with Toggle */}
+                        <div className="relative w-full" style={{ maxWidth: '420px' }}>
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name="password"
+                                placeholder="Password"
+                                required
+                                className="w-full outline-none transition-[border-color] duration-300 focus:border-[var(--accent-olive)]"
+                                style={{
+                                    backgroundColor: 'var(--background)',
+                                    border: '1px solid var(--border-color)',
+                                    color: 'var(--text-primary)',
+                                    margin: '8px 0',
+                                    padding: '10px 15px',
+                                    fontSize: '13px',
+                                    borderRadius: '8px',
+                                }}
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer bg-transparent border-none"
+                                style={{ color: '#777' }}
+                            >
+                                {showPassword ? (
+                                    <Eye className="w-4 h-4" />
+                                ) : (
+                                    <EyeOff className="w-4 h-4" />
+                                )}
+                            </button>
+                        </div>
+
+                        {/* Forgot Password Link */}
+                        <a
+                            href="/"
+                            className="no-underline transition-colors duration-300 hover:text-[var(--accent-gold)]"
+                            style={{
+                                color: 'var(--text-secondary)',
+                                fontSize: '13px',
+                                margin: '15px 0 10px',
+                            }}
+                        >
+                            Lupa Password?
+                        </a>
+
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="cursor-pointer uppercase tracking-wider transition-all duration-100 hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                            style={{
+                                backgroundColor: 'var(--accent-gold)',
+                                color: 'var(--text-primary)',
+                                fontSize: '12px',
+                                padding: '10px 45px',
+                                border: '1px solid transparent',
+                                borderRadius: '8px',
+                                fontWeight: 600,
+                                letterSpacing: '0.5px',
+                                marginTop: '10px',
+                            }}
+                        >
+                            {isSubmitting ? 'Memproses...' : 'Masuk'}
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
+    )
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--background)' }}>
+                <p style={{ color: 'var(--text-secondary)' }}>Memuat...</p>
+            </div>
+        }>
+            <LoginForm />
+        </Suspense>
     )
 }

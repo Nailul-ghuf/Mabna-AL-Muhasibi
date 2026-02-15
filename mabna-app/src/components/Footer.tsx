@@ -14,7 +14,7 @@ export function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li><Link href="/" className="footer-link hover:text-[var(--accent-olive)] transition-all">Beranda</Link></li>
                             <li><Link href="/profile" className="footer-link hover:text-[var(--accent-olive)] transition-all">Profil</Link></li>
-                            <li><Link href="/kegiatan" className="footer-link hover:text-[var(--accent-olive)] transition-all">Kegiatan</Link></li>
+                            <li><Link href="/galeri" className="footer-link hover:text-[var(--accent-olive)] transition-all">Galeri</Link></li>
                             <li><Link href="/jadwal" className="footer-link hover:text-[var(--accent-olive)] transition-all">Jadwal</Link></li>
                             <li><Link href="#kontak" className="footer-link hover:text-[var(--accent-olive)] transition-all">Kontak</Link></li>
                         </ul>
@@ -97,7 +97,7 @@ export function Footer() {
                         © 2025 Asrama Al Muhasibi. Developed by <a href="#" className="hover:text-[#2E7D32] font-semibold">Nailul</a>
                     </p>
                     <div className="order-1 md:order-2 text-center md:text-right">
-                        <Link href="/admin/login" className="hover:text-[#2E7D32] transition-colors block md:inline">
+                        <Link href="/login" className="hover:text-[#2E7D32] transition-colors block md:inline">
                             Login Admin
                         </Link>
                     </div>

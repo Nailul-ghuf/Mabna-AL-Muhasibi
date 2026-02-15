@@ -14,11 +14,11 @@ export default async function Home() {
     .select("*")
     .order("order", { ascending: true });
 
-  // Fetch Latest Activities
-  const { data: activities } = await supabase
-    .from("activities")
+  // Fetch Latest Gallery Items
+  const { data: galleryItems } = await supabase
+    .from("gallery")
     .select("*")
-    .order("event_date", { ascending: false })
+    .order("created_at", { ascending: false })
     .limit(4);
 
   // Icon Mapper
@@ -191,45 +191,44 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Galeri Preview Section (Kegiatan) */}
-      <section id="kegiatan-mahasantri" className="py-20 md:py-28 bg-[var(--background)]">
+      {/* Galeri Preview Section */}
+      <section id="galeri-preview" className="py-20 md:py-28 bg-[var(--background)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto" data-aos="fade-up">
             <h2 className="text-3xl font-bold text-[var(--accent-olive)] font-heading">
-              Kegiatan Mahasantri
+              Galeri Dokumentasi
             </h2>
             <p className="mt-4 text-lg text-[var(--text-secondary)]">
-              Momen-momen berharga dari berbagai kegiatan yang kami
-              selenggarakan.
+              Momen-momen berharga dari berbagai kegiatan dan dokumentasi asrama.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {activities && activities.length > 0 ? (
-              activities.map((activity, index) => (
+            {galleryItems && galleryItems.length > 0 ? (
+              galleryItems.map((item, index) => (
                 <div
-                  key={activity.id}
+                  key={item.id}
                   className="card-program overflow-hidden rounded-lg shadow-md aspect-[3/4] relative group"
                   data-aos="fade-up"
                   data-aos-delay={(index + 1) * 100}
                 >
                   <Image
-                    src={activity.image_url || `https://placehold.co/800x600/212529/F8F9FA?text=${activity.title}`}
-                    alt={activity.title}
+                    src={item.image_url || `https://placehold.co/800x600/212529/F8F9FA?text=${item.title || 'Galeri'}`}
+                    alt={item.title || item.caption || 'Galeri'}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <p className="text-white text-sm font-semibold">{activity.title}</p>
+                    <p className="text-white text-sm font-semibold">{item.title || item.caption}</p>
                   </div>
                 </div>
               ))
             ) : (
               /* Fallback (Static) */
               [
-                "https://images.unsplash.com/photo-1604328993558-a0c445440763?q=80&w=800",
-                "https://images.unsplash.com/photo-1618494432128-4499b78e9174?q=80&w=800",
-                "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=800",
-                "https://images.unsplash.com/photo-1599485659222-289f682855e3?q=80&w=800"
+                "/assets/FotoGeneral/gedungMuhasibi.jpg",
+                "/assets/FotoGeneral/MusyMuhasibi-1.png",
+                "/assets/FotoGeneral/gedungMuhasibi.jpg",
+                "/assets/FotoGeneral/MusyMuhasibi-1.png"
               ].map((src, index) => (
                 <div
                   key={index}
@@ -239,7 +238,7 @@ export default async function Home() {
                 >
                   <Image
                     src={src}
-                    alt={`Kegiatan ${index + 1}`}
+                    alt={`Dokumentasi ${index + 1}`}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -248,8 +247,8 @@ export default async function Home() {
             )}
           </div>
           <div className="mt-12 text-center" data-aos="fade-up">
-            <Link href="/kegiatan" className="btn btn-primary inline-flex items-center justify-center">
-              Lihat Semua Kegiatan
+            <Link href="/galeri" className="btn btn-primary inline-flex items-center justify-center">
+              Lihat Semua Galeri
             </Link>
           </div>
         </div>
