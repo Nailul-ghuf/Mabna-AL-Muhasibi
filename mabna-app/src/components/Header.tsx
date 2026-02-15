@@ -42,6 +42,7 @@ export function Header() {
                                 alt="Logo Al Muhasibi"
                                 fill
                                 className="object-cover"
+                                suppressHydrationWarning
                             />
                         </div>
                         <div className="flex flex-col">

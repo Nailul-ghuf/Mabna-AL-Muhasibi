@@ -163,10 +163,11 @@ export default async function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" className="relative h-[400px] w-full rounded-lg shadow-lg overflow-hidden">
               <Image
-                src="/assets/gedungMuhasibi.jpg"
+                src="/assets/FotoGeneral/gedungMuhasibi.jpg"
                 alt="Gedung Asrama Al Muhasibi"
                 fill
                 className="object-cover"
+                suppressHydrationWarning
               />
             </div>
             <div data-aos="fade-left">
